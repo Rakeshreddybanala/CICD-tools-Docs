@@ -11,6 +11,7 @@ sudo ./ZAP_2_16_0_unix.sh -q -dir /opt/zaproxy
 
 # Create the report directory BEFORE running zap.sh
 sudo mkdir -p /opt/zaproxy/owasp-zap-report
+sudo useradd --system --create-home --shell /bin/bash gitlab-runner
 sudo chown -R gitlab-runner:gitlab-runner /opt/zaproxy/owasp-zap-report
 sudo chmod -R 777 /opt/zaproxy/owasp-zap-report
 
